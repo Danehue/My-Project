@@ -42,7 +42,7 @@ public class Test : MonoBehaviour
 
     void healPlayer()
     {
-        playerHealth += 20;
+        playerHealth += 15;
         Debug.Log(playerHealth);
     }
 }
