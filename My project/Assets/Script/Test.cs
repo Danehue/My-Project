@@ -45,4 +45,9 @@ public class Test : MonoBehaviour
         playerHealth += 15;
         Debug.Log(playerHealth);
     }
+
+    void handleShoot()
+    {
+        Debug.Log("Paw Paw");
+    }
 }
