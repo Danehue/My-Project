@@ -8,25 +8,35 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
-    public int playerSpeed;
-    public int playerHealth;
-    public Vector3 playerPosition;
-    public Vector3 playerScale;
+    // public int playerSpeed;
+    // public int playerHealth;
+    // public Vector3 playerPosition;
+    // public Vector3 playerScale;
+
+    public GameObject ammo;
+    public Transform ammoInitialPosition;
 
     
-    // Start is called before the first frame update
     void Start()
     {
-        playerSpeed = 1;
-        playerHealth = 100;
-        playerScale = new Vector3(2,3,2);
+        // playerSpeed = 1;
+        // playerHealth = 100;
+        // playerScale = new Vector3(2,3,2);
+
+        handleShoot();
+
     }
 
-    // Update is called once per frame
+    void handleShoot()
+    {
+        Instantiate(ammo,ammoInitialPosition.position,ammoInitialPosition.rotation);
+    }
+    
+/*
     void Update()
     {
         handleMove();
-    }
+    }  
 
     void handleMove()
     {
@@ -45,9 +55,6 @@ public class Test : MonoBehaviour
         playerHealth += 20;
         Debug.Log(playerHealth);
     }
-
-    void handleShoot()
-    {
-        Debug.Log("Paw Paw");
-    }
+*/ 
+    
 }
